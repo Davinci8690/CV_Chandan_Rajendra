@@ -1,0 +1,75 @@
+﻿@model CV_Chandan_Rajendra.Models.Projects
+
+@{
+    ViewBag.Title = "RES_Tool";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RES_Tool</h2>
+
+<div>
+    <h4>Projects</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lan_or_tool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lan_or_tool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Worked_for)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Worked_for)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proj_hyperlink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proj_hyperlink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image_loc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image_loc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

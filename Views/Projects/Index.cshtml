@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CV_Chandan_Rajendra.Models.Projects>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<table class="table table-hover">
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+           
+                <div class="alert alert-dismissible alert-light">
+                    <div class="col-md-16">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Project @Html.DisplayFor(modelItem => item.Id):</h4>
+                            <h2>@Html.DisplayFor(modelItem => item.Name)</h2>
+                            <p><img src=@Html.DisplayFor(modelItem => item.Image_loc) alt="logo" width="500" height="250"></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </p>
+                            <p>
+                                Language or tool used for project: <b>@Html.DisplayFor(modelItem => item.Lan_or_tool)</b>
+                            </p>
+                            <p><a href=@Html.DisplayFor(modelItem => item.Path) class="btn btn-primary btn-lg">View more &raquo;</a></p>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                }
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+

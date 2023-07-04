@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="nav-link active" href="/Home/Index" style="font-size:24px;">Chandan Rajendra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Skills/Index">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Projects/Index">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Work/Index2">Work History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Education/Index">Education and Training </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Languages">Languages known</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - CV: Chandan Rajendra</p>
+            <p><a href="https://www.linkedin.com/in/chandan-rajendra-596525103" target="_blank"><img src="\Images\Linkedin_logo.png" alt="LinkedIn logo" width="20" height="15"> : Chandan Rajendra     </a>&nbsp;&nbsp;&nbsp;  
+            <a href="mailto:chandan.rajendra5117@gmail.com" target="_blank"><img src="~/Images/gmail_logo.png" alt="Gmail logo" width="20" height="15"> : chandan.rajendra5117@gmail.com</a> 
+            </p>
+            
+            <p>
+                <img src="~/Images/Call_logo.png" alt="Call logo" width="20" height="20" /> : +39 375 504 2964 &nbsp;&nbsp;&nbsp;
+                <img src="~/Images/Whatsapp_logo.jpg" alt="LinkedIn logo" width="20" height="20"> : +91 809 513 7789
+            </p>
+            <p></p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
